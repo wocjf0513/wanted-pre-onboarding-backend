@@ -19,12 +19,14 @@ public class CustomAuthenticationFilter extends UsernamePasswordAuthenticationFi
 	}
 	
 	public Authentication authenticate(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException{
-		log.info(request.getParameter("username")+" "+request.getParameter("password"));
+		log.info("custom filter 실행중~");
 		UsernamePasswordAuthenticationToken token=new UsernamePasswordAuthenticationToken(request.getParameter("username")
 				, request.getParameter("password"));
+		
 		setDetails(request, token);
 		return this.getAuthenticationManager().authenticate(token);
 	}
+	
 	
 
 }

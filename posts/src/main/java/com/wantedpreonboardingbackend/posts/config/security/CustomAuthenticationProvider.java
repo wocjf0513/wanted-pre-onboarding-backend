@@ -9,7 +9,9 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 
 public class CustomAuthenticationProvider implements AuthenticationProvider {
 	
@@ -27,7 +29,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
 		UsernamePasswordAuthenticationToken token=(UsernamePasswordAuthenticationToken) authentication;
 		String userEmail=token.getName();
 		String userPw=(String)token.getCredentials();
-		
+		log.info("provider 진행중");
 		UserDetailsVO userDetailsVO=(UserDetailsVO) userDetailServiceImpl.loadUserByUsername(userEmail);
 		
 		if(!passwordEncoder.matches(userPw,  userDetailsVO.getPassword())) {

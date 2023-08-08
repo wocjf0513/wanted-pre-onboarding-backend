@@ -3,6 +3,7 @@ package com.wantedpreonboardingbackend.posts.dto;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.wantedpreonboardingbackend.posts.Authorities;
 import com.wantedpreonboardingbackend.posts.entity.Post;
 
 import lombok.Data;
@@ -15,6 +16,8 @@ public class UserDTO {
 	private String email;
 	
 	private String password;
+	
+	private Authorities role;
 
 	private List<Post> posts=new ArrayList<Post>();
 	
