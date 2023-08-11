@@ -19,7 +19,8 @@
 
 5. 이제 API 명세에 따라 사용하면 됩니다.
 ## 3. 데이터베이스 테이블 구조
-![image](https://github.com/wocjf0513/wanted-pre-onboarding-backend/assets/59725406/4980cf63-3a81-41d0-ae4a-dd3288b22990)
+![image](https://github.com/wocjf0513/wanted-pre-onboarding-backend/assets/59725406/1482e18e-752e-4192-bc3f-b3cb98ed6f40)
+
 
 ## 4. 구현한 API의 동작을 촬영한 데모 영상 링크
 [데모 영상 링크](https://blog.naver.com/wocjf0513/223181579318)
@@ -45,12 +46,13 @@
      	마지막으로 RESTful API를 위해 HTTP URI 자원을 명시하고 HTTP Method를 통해 행위를 표현하는 규칙을 지키면서 구현했다.
    
 ## 6. API 명세(request/response 포함)
-![image](https://github.com/wocjf0513/wanted-pre-onboarding-backend/assets/59725406/dfab3d54-66e2-4fb3-8709-6f13d5cb8d0a)
-![image](https://github.com/wocjf0513/wanted-pre-onboarding-backend/assets/59725406/2071fb1d-38ce-49f5-b30a-fc9c70192d99)
-![image](https://github.com/wocjf0513/wanted-pre-onboarding-backend/assets/59725406/72688703-9bc3-49bd-bfcf-4ae527f04cef)
-![image](https://github.com/wocjf0513/wanted-pre-onboarding-backend/assets/59725406/97de54d7-e3cb-4f39-b53c-cce509816637)
-![image](https://github.com/wocjf0513/wanted-pre-onboarding-backend/assets/59725406/77a19d9a-19cc-40ef-b4ae-8ca9777c6075)
-![image](https://github.com/wocjf0513/wanted-pre-onboarding-backend/assets/59725406/3ac37566-0384-4538-930b-6c7a4f03db3d)
-![image](https://github.com/wocjf0513/wanted-pre-onboarding-backend/assets/59725406/491024be-a575-414b-aba8-4705f7e4b757)
-![image](https://github.com/wocjf0513/wanted-pre-onboarding-backend/assets/59725406/bd7dd3b9-2998-4216-aec9-3214b39fd2ef)
+![image](https://github.com/wocjf0513/wanted-pre-onboarding-backend/assets/59725406/7173aa40-27a1-48d6-aec4-0e5b869e93e7)
+![image](https://github.com/wocjf0513/wanted-pre-onboarding-backend/assets/59725406/628c9897-4900-4063-af9e-18a462e26aef)
+![image](https://github.com/wocjf0513/wanted-pre-onboarding-backend/assets/59725406/e6f9d8ed-5a0e-4e3b-a469-8526c0bf2d57)
+![image](https://github.com/wocjf0513/wanted-pre-onboarding-backend/assets/59725406/d8db8d80-54b9-4df0-ba26-f6f5a55f0545)
+![image](https://github.com/wocjf0513/wanted-pre-onboarding-backend/assets/59725406/d2e3b1df-b1d5-4280-a31d-8ec1f808cb2b)
+![image](https://github.com/wocjf0513/wanted-pre-onboarding-backend/assets/59725406/babd7653-3843-4129-8c57-143f6d08d03f)
+![image](https://github.com/wocjf0513/wanted-pre-onboarding-backend/assets/59725406/9a24e0fc-e393-4660-9f48-3816f49a6618)
+![image](https://github.com/wocjf0513/wanted-pre-onboarding-backend/assets/59725406/8487b488-f85e-44a4-b84b-d22439de6858)
+
 
