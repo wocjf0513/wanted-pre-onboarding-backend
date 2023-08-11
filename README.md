@@ -22,6 +22,7 @@
 ![image](https://github.com/wocjf0513/wanted-pre-onboarding-backend/assets/59725406/4980cf63-3a81-41d0-ae4a-dd3288b22990)
 
 ## 4. 구현한 API의 동작을 촬영한 데모 영상 링크
+[데모 영상 링크](https://blog.naver.com/wocjf0513/223181579318)
 ## 5. 구현 방법 및 이유에 대한 간략한 설명
 	1) 구현하기 전, Visual Paradigm프로그램을 통해 데이터베이스에 대한 설계를 먼저 했다. 
  	POST USER과 서로 참조하면서, USER삭제시 USER가 작성했던 POST가 다 삭제되도록 합성관계를 갖게 했다. USER가 삭제됐는데, POST가 존재하면 이상하기 때문이다.
