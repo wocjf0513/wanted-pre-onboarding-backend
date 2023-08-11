@@ -1,6 +1,7 @@
 package com.wantedpreonboardingbackend.posts.controller;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -25,7 +26,7 @@ public class UserController {
 	private final UserService userService;
 	
 	
-	@PostMapping("/auth")
+	@GetMapping("/auth")
 	public ResponseEntity<JwtToken> login(@RequestBody UserDTO user){
 		if(userService.isExsistedUser(user)) {
 			JwtToken token=userService.generateToken(user);
@@ -46,13 +47,8 @@ public class UserController {
 		 */
 		user.setRole(Authorities.USER);
 		if(userService.vertifyAccount(user)) {
-			User savedUser=userService.saveAccount(user);
-			
-			if(savedUser==null)
-				return ResponseEntity.ofNullable(null);
-			else
-				return ResponseEntity.ok(null);
-			
+			UserDTO savedUserDto=userService.saveAccount(user);
+			return ResponseEntity.ofNullable(savedUserDto);
 		}
 		else {
 			return ResponseEntity.ofNullable(null);

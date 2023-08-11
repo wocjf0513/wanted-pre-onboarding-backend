@@ -49,7 +49,7 @@ public class JwtProvider  {
 		String acessToken=Jwts.builder()
 				.setSubject(authentication.getName())
 				.claim("auth",authorities)
-				.setExpiration(new Date(System.currentTimeMillis()+1000*60*30))
+				.setExpiration(new Date(System.currentTimeMillis()+1000*60*60))
 				.signWith(SignatureAlgorithm.HS256, secretStrKey)
 				.compact();
 		

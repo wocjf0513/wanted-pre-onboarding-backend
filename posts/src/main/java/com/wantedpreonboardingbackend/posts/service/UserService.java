@@ -78,11 +78,11 @@ public class UserService {
 		}
 	}
 	
-	public User saveAccount(UserDTO user) {
+	public UserDTO saveAccount(UserDTO user) {
 		User newUser=User.builder().email(user.getEmail())
 				.password(bCryptPasswordEncoder.encode(user.getPassword()))
 				.role(Authorities.USER).build();
-		return userRepository.save(newUser);	
+		return new UserDTO(userRepository.save(newUser));	
 	}
 
 	
