@@ -3,7 +3,7 @@ package com.wantedpreonboardingbackend.posts.dto;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.wantedpreonboardingbackend.posts.Authorities;
+import com.wantedpreonboardingbackend.posts.auth.Authorities;
 import com.wantedpreonboardingbackend.posts.entity.Post;
 import com.wantedpreonboardingbackend.posts.entity.User;
 

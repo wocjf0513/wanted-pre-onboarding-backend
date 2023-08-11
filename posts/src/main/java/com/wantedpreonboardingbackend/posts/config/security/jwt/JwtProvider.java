@@ -17,7 +17,7 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 
-import com.wantedpreonboardingbackend.posts.Authorities;
+import com.wantedpreonboardingbackend.posts.auth.Authorities;
 import com.wantedpreonboardingbackend.posts.config.security.UserDetailsVO;
 
 import io.jsonwebtoken.Claims;

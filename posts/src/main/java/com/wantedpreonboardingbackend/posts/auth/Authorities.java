@@ -1,4 +1,4 @@
-package com.wantedpreonboardingbackend.posts;
+package com.wantedpreonboardingbackend.posts.auth;
 
 public enum Authorities{
 	USER("USER");

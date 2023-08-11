@@ -17,7 +17,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.wantedpreonboardingbackend.posts.Authorities;
+import com.wantedpreonboardingbackend.posts.auth.Authorities;
 import com.wantedpreonboardingbackend.posts.config.security.jwt.JwtProvider;
 import com.wantedpreonboardingbackend.posts.config.security.jwt.JwtToken;
 import com.wantedpreonboardingbackend.posts.dto.UserDTO;
@@ -41,8 +41,7 @@ public class UserService {
 	}
 	
 	public boolean isExsistedUser(UserDTO user) {
-		
-		User retrivedUser=userRepository.findByEmail(user.getEmail()).orElse(null);
+		User retrivedUser=userRepository.findByEmail(user.getEmail()).orElseThrow();
 		if(retrivedUser!=null && bCryptPasswordEncoder.matches(user.getPassword(), retrivedUser.getPassword())) {
 			user.setRole(retrivedUser.getRole());
 			return true;

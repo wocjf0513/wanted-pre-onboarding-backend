@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.hibernate.annotations.ColumnDefault;
 
-import com.wantedpreonboardingbackend.posts.Authorities;
+import com.wantedpreonboardingbackend.posts.auth.Authorities;
 
 import io.micrometer.common.lang.Nullable;
 import jakarta.persistence.CascadeType;

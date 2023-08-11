@@ -1,5 +1,7 @@
 package com.wantedpreonboardingbackend.posts.service;
 
+import java.util.NoSuchElementException;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
@@ -29,10 +31,10 @@ public class PostService {
 		this.userRepository=userRepository;
 	}
 
-	public PostDTO savePost(PostDTO post) {
+	public PostDTO savePost(PostDTO post) throws NoSuchElementException {
 		UserDetails user=(UserDetails)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		
-		User retrivedUser=userRepository.findByEmail(user.getUsername()).orElse(null);
+		User retrivedUser=userRepository.findByEmail(user.getUsername()).orElseThrow();
 		if(retrivedUser==null) {
 			log.info("작성자 이메일이 db에 없다.");
 			return null;
@@ -53,7 +55,7 @@ public class PostService {
 		}
 	}
 	
-	public PostDTO getPost(long postId){
+	public PostDTO getPost(long postId) throws NoSuchElementException {
 		Post retrivedPost=postRepository.findById(postId).orElseThrow();
 		
 		return new PostDTO(retrivedPost);
@@ -67,7 +69,7 @@ public class PostService {
 		return pages;
 	}
 	
-	public boolean isWriter(long postId) {
+	public boolean isWriter(long postId) throws NoSuchElementException  {
 		UserDetails user=(UserDetails)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		PostDTO retrivedPostDto=new PostDTO(postRepository.findById(postId).orElseThrow());
 		if(user.getUsername().equals(retrivedPostDto.getWriter())){
@@ -78,7 +80,7 @@ public class PostService {
 		}
 	}
 	
-	public PostDTO deletePost(long postId) {
+	public PostDTO deletePost(long postId) throws NoSuchElementException  {
 		if(isWriter(postId)) {
 			postRepository.deleteById(postId);
 			return new PostDTO();
@@ -89,7 +91,7 @@ public class PostService {
 	}
 	
 	@Transactional
-	public PostDTO rewritePost(String content, long postId) {
+	public PostDTO rewritePost(String content, long postId)throws NoSuchElementException  {
 		if(isWriter(postId)) {
 			log.info(content);
 			Post retrivedPost=postRepository.getById(postId);
